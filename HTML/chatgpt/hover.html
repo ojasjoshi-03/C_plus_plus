@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effects</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            gap: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            text-align: center;
+            background-color: lightblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover Effect */
+        .box:hover {
+            transform: scale(1.1); /* Enlarge the box */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1: Hover Me</div>
+        <div class="box">Box 2: Hover Me</div>
+        <div class="box">Box 3: Hover Me</div>
+        <div class="box">Box 4: Hover Me</div>
+    </div>
+</body>
+</html>

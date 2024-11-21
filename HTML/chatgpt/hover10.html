@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Gradient Hover</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            background: linear-gradient(45deg, #ff8c00, #e52e71);
+            color: white;
+            border: 2px solid #333;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 1s ease-in-out;
+        }
+
+        .box:hover {
+            background: linear-gradient(45deg, #e52e71, #ff8c00);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hover to see the gradient change</div>
+        <div class="box">Hover to see the gradient change</div>
+        <div class="box">Hover to see the gradient change</div>
+        <div class="box">Hover to see the gradient change</div>
+    </div>
+</body>
+</html>

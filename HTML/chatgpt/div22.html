@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Unique Styles</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Add spacing between divisions */
+        }
+        .box1 {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(to right, lightblue, skyblue);
+            border: 2px dashed navy;
+            font-family: Arial, sans-serif;
+            transition: transform 0.3s ease; /* Add a hover effect */
+        }
+        .box1:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        .box2 {
+            padding: 20px;
+            text-align: center;
+            background-color: lightgreen;
+            background-image: url('https://via.placeholder.com/200x100.png?text=Pattern');
+            border: 3px solid darkgreen;
+            font-family: "Courier New", monospace;
+            color: darkgreen;
+            background-size: cover; /* Adjust image size */
+            transition: opacity 0.3s ease;
+        }
+        .box2:hover {
+            opacity: 0.8; /* Dim the box on hover */
+        }
+
+        .box3 {
+            padding: 20px;
+            text-align: left; /* Align text to the left */
+            background-color: lightcoral;
+            border: 4px dotted maroon;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+            font-style: italic;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        .box3:hover {
+            background-color: darkred; /* Change background on hover */
+            color: white; /* Change text color on hover */
+        }
+
+        .box4 {
+            padding: 20px;
+            text-align: right; /* Align text to the right */
+            background-color: lightyellow;
+            border: 2px solid orange;
+            border-radius: 10px; /* Add rounded corners */
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">Box 1: Gradient Background with Hover Zoom</div>
+        <div class="box2">Box 2: Patterned Background with Hover Dim</div>
+        <div class="box3">Box 3: Left-Aligned Text with Shadow</div>
+        <div class="box4">Box 4: Right-Aligned Text with Rounded Borders</div>
+    </div>
+</body>
+</html>

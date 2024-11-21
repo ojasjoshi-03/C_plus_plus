@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe Animation</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            gap: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            text-align: center;
+            background-color: lightgreen;
+            border: 2px solid #333;
+            box-sizing: border-box;
+            animation: rotateBounce 2s infinite; /* Apply keyframe animation */
+        }
+
+        /* Keyframe Animation */
+        @keyframes rotateBounce {
+            0% {
+                transform: rotate(0deg) scale(1);
+                background-color: lightgreen;
+            }
+            50% {
+                transform: rotate(180deg) scale(1.1);
+                background-color: lightyellow;
+            }
+            100% {
+                transform: rotate(360deg) scale(1);
+                background-color: lightgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Rotating and Bouncing</div>
+        <div class="box">Rotating and Bouncing</div>
+        <div class="box">Rotating and Bouncing</div>
+        <div class="box">Rotating and Bouncing</div>
+    </div>
+</body>
+</html>

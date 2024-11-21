@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Hover Effect</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            perspective: 1000px; /* Enable 3D space */
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+            border: 2px solid #333;
+            transition: transform 0.5s;
+            transform-style: preserve-3d; /* Enable 3D transformations */
+        }
+
+        .box:hover {
+            transform: rotateY(20deg) rotateX(20deg); /* 3D rotation on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hover to Rotate</div>
+    </div>
+</body>
+</html>
+

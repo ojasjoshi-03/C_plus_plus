@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and Gradient Hover</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            background-color: #fff;
+            color: transparent;
+            border: 2px solid #333;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.5s ease, color 0.3s ease;
+            background: linear-gradient(45deg, #ff8c00, #e52e71);
+            background-size: 200% 200%;
+            background-position: 0% 0%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px; /* Set fixed height */
+            width: 300px; /* Set fixed width */
+            position: relative;
+            flex-direction: column; /* Allow vertical stacking of text */
+        }
+
+        .box span {
+            font-size: 2em;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff8c00, #e52e71);
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: color 0.5s ease, transform 0.5s ease;
+            position: relative;
+            color: white;
+        }
+
+        /* Hover text will turn white */
+        .box:hover span {
+            color: white; /* Text turns white on hover */
+            transform: scale(1.1); /* Slight scale on hover */
+        }
+
+        /* Hidden Message */
+        .box .hidden-message {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+            margin-top: 20px; /* Space between the main text and hidden message */
+            font-size: 1.2em;
+            color: white;
+        }
+
+        .box:hover {
+            background-position: 100% 100%;
+        }
+
+        .box:hover .hidden-message {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.3s ease, visibility 0s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <span>Hover to see the effect</span>
+            <div class="hidden-message">Hello, this is a hidden message!</div>
+        </div>
+        <div class="box">
+            <span>Hover to see the effect</span>
+            <div class="hidden-message">Hello, this is a hidden message!</div>
+        </div>
+        <div class="box">
+            <span>Hover to see the effect</span>
+            <div class="hidden-message">Hello, this is a hidden message!</div>
+        </div>
+        <div class="box">
+            <span>Hover to see the effect</span>
+            <div class="hidden-message">Hello, this is a hidden message!</div>
+        </div>
+    </div>
+</body>
+</html>

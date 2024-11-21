@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Animations on Hover</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            gap: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            text-align: center;
+            background-color: lightblue;
+            border: 2px solid #333;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+
+        .box:hover {
+            background-color: lightcoral; /* Color change */
+            transform: scale(1.2); /* Scaling effect */
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Adding shadow */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hover Over Me</div>
+        <div class="box">Hover Over Me</div>
+        <div class="box">Hover Over Me</div>
+        <div class="box">Hover Over Me</div>
+    </div>
+</body>
+</html>

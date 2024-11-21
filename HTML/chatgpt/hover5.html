@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chained Animations</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            gap: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            text-align: center;
+            background-color: lightseagreen;
+            border: 2px solid #333;
+            box-sizing: border-box;
+            animation: bounceIn 1s, scaleUp 1s 1s; /* Chained animations */
+        }
+
+        /* Bounce Animation */
+        @keyframes bounceIn {
+            0% {
+                transform: translateY(-200px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Scale Up Animation */
+        @keyframes scaleUp {
+            0% {
+                transform: scale(0.8);
+            }
+            100% {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box with Sequential Animations</div>
+        <div class="box">Box with Sequential Animations</div>
+        <div class="box">Box with Sequential Animations</div>
+        <div class="box">Box with Sequential Animations</div>
+    </div>
+</body>
+</html>

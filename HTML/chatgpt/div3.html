@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive 2x2 Layout</title>
+    <style>
+        .container {
+            display: grid; /* Using CSS Grid */
+            grid-template-columns: 1fr 1fr; /* 2 columns on larger screens */
+            grid-template-rows: auto auto;
+            gap: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            text-align: center;
+            background-color: lightblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* 1 column on smaller screens */
+            }
+        }
+
+        /* Media Query for Extra Small Screens */
+        @media (max-width: 480px) {
+            .box {
+                font-size: 0.9em; /* Adjust font size on very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1: Large Screen</div>
+        <div class="box">Box 2: Large Screen</div>
+        <div class="box">Box 3: Large Screen</div>
+        <div class="box">Box 4: Large Screen</div>
+    </div>
+</body>
+</html>

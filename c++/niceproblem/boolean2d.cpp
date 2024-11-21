@@ -46,4 +46,5 @@ int main()
 
     int res= maximumOnesRows(vec);
     cout<<res<<endl;
+    return 0;  
 }    

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Clubs</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .club-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+        }
+        .club {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        .club:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        .club h2 {
+            font-size: 1.8rem;
+            color: #ff7e5f;
+            margin-bottom: 10px;
+        }
+        .club p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .club p strong {
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(to right, #feb47b, #ff7e5f);
+            color: white;
+            font-size: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>Welcome to Our Clubs</header>
+
+    <main class="club-container">
+        <div class="club">
+            <h2>Science Club</h2>
+            <p>Explore the wonders of science with experiments, discussions, and projects.</p>
+            <p><strong>Meeting Time:</strong> Thursdays, 4 PM</p>
+            <p><strong>Location:</strong> Room 101</p>
+        </div>
+        <div class="club">
+            <h2>Art Club</h2>
+            <p>Unleash your creativity through painting, drawing, and crafts.</p>
+            <p><strong>Meeting Time:</strong> Fridays, 3 PM</p>
+            <p><strong>Location:</strong> Art Studio</p>
+        </div>
+        <div class="club">
+            <h2>Sports Club</h2>
+            <p>Stay active and healthy with various sports activities and events.</p>
+            <p><strong>Meeting Time:</strong> Saturdays, 10 AM</p>
+            <p><strong>Location:</strong> Gymnasium</p>
+        </div>
+    </main>
+
+    <footer>© 2024 Our Clubs - All Rights Reserved</footer>
+
+</body>
+</html>

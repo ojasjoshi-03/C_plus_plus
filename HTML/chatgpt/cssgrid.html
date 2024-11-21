@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Gaps</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+            grid-template-rows: repeat(2, auto); /* Two rows */
+            gap: 20px 40px; /* 20px vertical gap, 40px horizontal gap */
+        }
+
+        .box {
+            padding: 20px;
+            text-align: center;
+            background-color: lightblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+    </div>
+</body>
+</html>

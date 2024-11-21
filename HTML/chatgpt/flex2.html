@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Different Divs</title>
+    <style>
+        .container {
+            display: flex; /* Arrange children side by side */
+            flex-direction: column;
+            gap: 20px;  /*put gap between two divisions*/
+        }
+        .left {
+            width: 40%; /* Left div takes 60% of the width */
+            padding: 20px;
+            background-color: lightblue;
+            box-sizing: border-box;
+            border: #ffffcc 5px dashed;
+        }
+        .right {
+            width: 40%; /* Right div takes 40% of the width */
+            padding: 20px;
+            background-color: lightgreen;
+            box-sizing: border-box;
+            border: #ffffcc 5px dashed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Left Division</h2>
+            <p>This is the left division. It is larger and has a different background color.</p>
+        </div>
+        <div class="right">
+            <h2>Right Division</h2>
+            <p>This is the right division. It is smaller but also distinct.</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="right">
+            <h2>Left Division</h2>
+            <p>This is the left division. It is larger and has a different background color.</p>
+        </div>
+        <div class="left">
+            <h2>Right Division</h2>
+            <p>This is the right division. It is smaller but also distinct.</p>
+        </div>
+    </div>
+</body>
+</html>

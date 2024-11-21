@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Animation</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto auto;
+            gap: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            text-align: center;
+            background-color: lightblue;
+            border: 1px solid black;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Hover Animation */
+        .box:hover {
+            background-color: lightcoral; /* Change background color */
+            animation: bounce 0.6s ease-in-out; /* Apply animation */
+        }
+
+        /* Bounce Animation */
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1: Hover Me</div>
+        <div class="box">Box 2: Hover Me</div>
+        <div class="box">Box 3: Hover Me</div>
+        <div class="box">Box 4: Hover Me</div>
+    </div>
+</body>
+</html>
+

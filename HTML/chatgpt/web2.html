@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Information</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #1e1e2f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .club-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 20px;
+        }
+        .club {
+            background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+            color: white;
+            border-radius: 12px;
+            width: 300px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .club:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .club h2 {
+            margin-bottom: 10px;
+        }
+        .club p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+        .ieee { color: #ffcc00; }
+        .gdsc { color: #34a853; }
+        .mlsc { color: #ff5a5f; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Explore Our Clubs</h1>
+        <p>Connect, learn, and grow with these exciting communities!</p>
+    </header>
+
+    <main class="club-container">
+        <div class="club">
+            <div class="icon ieee">⚡</div>
+            <h2>IEEE</h2>
+            <p>The IEEE club fosters technical innovation through workshops, seminars, and competitions.</p>
+            <p><strong>Meeting Time:</strong> Wednesdays, 5 PM</p>
+            <p><strong>Location:</strong> Tech Hall, Room 201</p>
+        </div>
+        <div class="club">
+            <div class="icon gdsc">💻</div>
+            <h2>Google Developer Student Club (GDSC)</h2>
+            <p>Join GDSC to learn about Google technologies, collaborate on projects, and build your skills.</p>
+            <p><strong>Meeting Time:</strong> Fridays, 6 PM</p>
+            <p><strong>Location:</strong> Innovation Lab, Room 305</p>
+        </div>
+        <div class="club">
+            <div class="icon mlsc">🤖</div>
+            <h2>Machine Learning Society (MLSC)</h2>
+            <p>Dive into AI and ML with hands-on projects, study groups, and industry insights.</p>
+            <p><strong>Meeting Time:</strong> Saturdays, 11 AM</p>
+            <p><strong>Location:</strong> AI Center, Room 410</p>
+        </div>
+    </main>
+
+</body>
+</html>
