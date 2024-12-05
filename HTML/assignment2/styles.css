@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #a8edea, #fed6e3);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(to right, #11998e, #38ef7d);
+    color: white;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header img {
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Club Container Styles */
+.club-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Club Card Styles */
+.club {
+    background: linear-gradient(135deg,  #56ccf2, #2f80ed);
+    color: white;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.club:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styles */
+.icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.club:hover .icon {
+    transform: rotate(15deg) scale(1.2);
+}
+
+/* Specific Icon Colors */
+.ieee { color: #f4d03f; }
+.gdsc { color:  #20bf55; }
+.swd { color: #fa8231; }
+
+/* Club Card Content */
+.club h2 {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.club p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(to right,#f12711, #f5af19);
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #f4d03f, #16a085);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .club-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .club {
+        width: 90%;
+    }
+}
