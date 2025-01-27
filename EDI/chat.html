@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <h1>StudyCompass</h1>
+    <div class="nav-links">
+      <button id="bookmarks-btn">Bookmarks</button>
+      <button id="profile-btn">Profile</button>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <nav id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Courses</a></li>
+      <li><a href="#">Quiz</a></li>
+      <li><a href="#">Roadmap</a></li>
+      <li><a href="#">Ask Experts</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="chat-section">
+      <h2>Chat & Posts</h2>
+      <div class="post-form">
+        <textarea id="post-text" placeholder="Write your post here..."></textarea>
+        <select id="post-visibility">
+          <option value="public">Public</option>
+          <option value="personal">Personal (Mentors only)</option>
+        </select>
+        <button id="post-btn">Post</button>
+      </div>
+      <div id="posts-container" class="posts-container"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

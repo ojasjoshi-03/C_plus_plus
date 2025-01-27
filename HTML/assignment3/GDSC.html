@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDSC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #232526, #414345);
+            color: #f5f5f5;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #414345, #232526);
+            padding: 20px;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        header button {
+            background-color: #232526;
+            color: #f5f4f4;
+            font-size: 16px;
+            margin-left: 10px;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        header button:hover {
+            background-color: #414345;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav button {
+            font-size: 18px;
+            margin: 10px;
+            background: none;
+            color: #f5f5f5;
+            border: 2px solid #f5f5f5;
+            padding: 12px 30px;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            transform: translateY(-5px);
+            background-color: #414345;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transition: box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        section img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        section h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin: 20px 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #f5f5f5;
+            border-radius: 12px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .feature-box:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .domains {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .domain-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #f5f5f5;
+            border-radius: 12px;
+            padding: 20px;
+            width: 280px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .domain-box:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+            transform: translateY(-5px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(62, 59, 62, 0.8);
+            color: #f5f5f5;
+        }
+
+        footer a {
+            color: #f5f5f5;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .event {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .event:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .event img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .event-info {
+            width: 65%;
+            padding: 0 20px;
+        }
+
+        .event-info h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .event-info p {
+            font-size: 18px;
+        }
+
+        .event-info button {
+            background-color: #232526;
+            color: #f5f5f5;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .event-info button:hover {
+            background-color: #414345;
+        }
+
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover; 
+    opacity: 0.8; 
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 50px;
+    color: white; 
+}
+
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src= "background (3).mp4" type="video/mp4">
+            <img src="fallback-image.jpg" alt="Video not supported">
+        </video>
+    </div>
+    <div class="content">
+    <header>
+        <img src="Screenshot (407).png" alt="IEEE Logo">
+        <div>
+            <button>SIGN UP</button>
+            <button>LOG IN</button>
+        </div>
+    </header>
+
+    <nav>
+        <button><a href="main.html"><b>HOME</b></a></button>
+        <button><a href="#target"><b>EVENTS</b></a></button>
+        <button><b>ACTIVITIES</b></button>
+        <button><b>ABOUT US</b></button>
+    </nav>
+
+    <section id="target">
+        <img src="Screenshot (411).png" alt="VIT Image">
+        <h2>GDSC</h2>
+        <p>Developer Student Clubs (DSC) are community groups for college and university students interested in Google developer technologies. We are a community of passionate developers and technologists dedicated to helping students build their skills, create innovative projects, and connect with like-minded peers.</p>
+    </section>
+
+    <section>
+        <h2>WHAT DO WE DO?</h2>
+        <p><b>Creating a Collaborative Community</b> - The club promotes a collaborative environment, peer mentoring, and networking through coding meetups and hackathons.</p>
+        <p><b>Skill Development and Training</b> - We organize workshops on web development, app development, machine learning, and cloud technologies.</p>
+        <p><b>Driving Innovation and Projects</b> - By hosting hackathons and supporting project incubation, DSC encourages students to develop impactful tech solutions.</p>
+        <p><b>Industry Exposure</b> - With guest lectures and tech talks, DSC prepares students for industry by connecting them with professionals.</p>
+    </section>
+
+    <div class="features">
+        <div class="feature-box">
+            <i>🗓️</i>
+            <p>We organize a variety of events and workshops throughout the year.</p>
+        </div>
+        <div class="feature-box">
+            <i>👥</i>
+            <p>We collaborate with industry experts to bring you exclusive insights.</p>
+        </div>
+        <div class="feature-box">
+            <i>🎯</i>
+            <p>Our goal is to help you learn, grow, and connect with the tech community.</p>
+        </div>
+    </div>
+
+    <div class="domains">
+        <div class="domain-box">
+            <h3>TECHNICAL DOMAIN</h3>
+            <p>1. WEB DEVELOPMENT<br>2. APP DEVELOPMENT<br>3. AI/ML<br>4. WEB 3</p>
+        </div>
+        <div class="domain-box">
+            <h3>NON-TECHNICAL DOMAIN</h3>
+            <p>1. MANAGEMENT<br>2. CONTENT<br>3. MULTI MEDIA</p>
+        </div>
+    </div>
+
+    <section>
+        <h2>EVENTS</h2>
+
+        <div class="event">
+            <img src="Screenshot (417).png" alt="Hackathon">
+            <div class="event-info">
+                <h3>Event 1: Hackathon 2024</h3>
+                <p>Join us for an exciting 48-hour hackathon where students work in teams to solve real-world problems with technology.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="Screenshot (418).png" alt="AI Workshop">
+            <div class="event-info">
+                <h3>Event 2: AI Workshop</h3>
+                <p>Get hands-on experience with the latest advancements in artificial intelligence through our immersive workshop.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+
+        <div class="event">
+            <img src="Screenshot (420).png  " alt="Cloud Bootcamp">
+            <div class="event-info">
+                <h3>Event 3: Cloud Computing Bootcamp</h3>
+                <p>Master the fundamentals of cloud computing and deploy scalable applications in the cloud with our bootcamp.</p>
+                <button>Learn More</button>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        © 2024 GDSC Student Branch VIT Pune
+    </footer>
+    </div>
+</body>
+</html>

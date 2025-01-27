@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 5px;
+            margin: 5px;
+        }
+        .imp {
+            font-size: 15px;
+            color: brown;
+            border: 2px solid black;
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        let a=1;
+        $(document).ready(function() {
+            $("#hide").click(function() {
+                if (a==1) {
+                    $("p").hide();
+                    a=0;
+                }
+                else if (a==0) {
+                    $("p").show();
+                    a=1;
+                }
+            })
+        });
+
+        $(document).ready(function() {
+            let b=1;
+            $("#bgcolor").click(function() {
+                if (b==1) {
+                    $("body").css("background-color","yellow");
+                    b=0;
+                }
+                else if (b==0) {
+                    $("body").css("background-color","white");
+                    b=1;
+                }               
+            })
+        });
+
+        $(document).ready(function () {
+            $("#append").click(function () {
+                $("p").append("<b>LALALALALALA</b>");
+            })
+        });
+
+        $(document).ready(function () {
+            let c=1;
+            $("#addclass").click(function () {
+                if (c==1) {
+                    $("p").addClass("imp"); 
+                    c=0;
+                }
+                else if (c==0) {
+                    $("p").removeClass("imp"); 
+                    c=1;
+                }
+                
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Hi there</h2>
+    <button id="hide">Toggle paragraph display</button>
+    <button id="bgcolor">Toggle background color</button>
+    <button id="append">Append Text</button>
+    <button id="addclass">Add Class</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis rem neque, a totam veritatis quae magni aspernatur corrupti. Eligendi distinctio ut modi enim, consequuntur dolore quo iusto officia. Quod, minima.
+    Dolorum, accusantium in laudantium cupiditate deserunt nulla quia repudiandae et quasi rerum repellendus assumenda doloribus veritatis maxime obcaecati alias voluptate facilis architecto. Qui corporis odio impedit dolorum laudantium nemo asperiores.</p>
+    
+    
+</body>
+</html>

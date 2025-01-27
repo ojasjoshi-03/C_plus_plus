@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrollable Logo with Fade-Out Effect</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Container for the logo */
+    .logo-container {
+      position: sticky;
+      top: 0;
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      z-index: 10; /* Ensure the logo stays above the content */
+    }
+
+    .logo-container img {
+      max-width: 200px;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    /* Content section */
+    .content {
+      min-height: 200vh; /* Ensure there is enough content to scroll */
+      padding: 20px;
+      background-color: #ffffff;
+    }
+
+    /* Fade-out effect on scroll */
+    .logo-container img {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Reduce opacity and move up when scrolling */
+    .logo-container.sticky-active img {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container" id="logo">
+    <img src="your-logo.png" alt="Logo">
+  </div>
+  <div class="content">
+    <h1>Welcome to the Content Section</h1>
+    <p>This is where the rest of your webpage content goes. Add as much content as you'd like!</p>
+  </div>
+
+  <script>
+    const logoContainer = document.getElementById('logo');
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY > 50) {
+        logoContainer.classList.add('sticky-active');
+      } else {
+        logoContainer.classList.remove('sticky-active');
+      }
+    });
+  </script>
+</body>
+</html>

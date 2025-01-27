@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video autoplay loop muted id="background-video">
+        <source src="background (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <header>
+        <img src="Screenshot (438).png" height="150" width="550" alt="Club Logo" />
+        <h1>Explore Our Clubs</h1>
+        <p>Connect, learn, and grow with these exciting communities!</p>
+    </header>
+    <div class="search-bar-container">
+        <form class="search-form">
+            <label for="dropdown" class="search-label">Navigate:</label>
+            <select id="dropdown" class="search-dropdown">
+                <option value="" disabled selected>Choose a page</option>
+                <option value="IEEE.html"> <a href="C:\Users\Joshi\Desktop\C_plus_plus\HTML\assignment3\IEEE.html">PAGE 1</a></option>
+                <option value="GDSC.html"><a href="GDSC.html">PAGE 2</a></option>
+                <option value="SWD.html"><a href="SWD.html">PAGE 3</a></option>
+            </select>
+            <button type="button" id="navigate-btn" class="search-button">Go</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+    <main class="club-container">
+        <div class="club">
+            <div class="icon ieee" aria-label="IEEE">⚡</div>
+            <h2>Institute of Electrical and Electronics Engineers (IEEE)</h2>
+            <p>The IEEE club fosters technical innovation through workshops, seminars, and competitions.</p>
+            <a href="IEEE.html" class="btn">CLICK HERE >></a>
+        </div>
+        <div class="club">
+            <div class="icon gdsc" aria-label="GDSC">💻</div>
+            <h2>Google Developer Student Club (GDSC)</h2>
+            <p>Join GDSC to learn about Google technologies, collaborate on projects, and build your skills.</p>
+            <a href="GDSC.html" class="btn">CLICK HERE >></a>
+        </div>
+        <div class="club">
+            <div class="icon swd" aria-label="SWD">🤝</div>
+            <h2>Social Welfare and Development Committee (SWD)</h2>
+            <p>Dive into happiness after proving to be a "Human".</p>
+            <a href="SWD.html" class="btn">CLICK HERE >></a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Club Information. All rights reserved.</p>
+    </footer>
+</body>
+</html>

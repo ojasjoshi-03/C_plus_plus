@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ff8c00, #ff5e62, #feb47b); 
+  background-size: 300% 300%;
+  animation: gradientAnimation 5s ease infinite;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fixed Header Styles */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2d2d2d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.fixed-header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+#thought-of-the-day {
+  font-size: 18px;
+  margin: 10px 0;
+  font-style: italic;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 80px; 
+  left: -250px;
+  background-color: #333;
+  color: #fff;
+  transition: left 0.3s ease;
+  padding-top: 20px;
+  box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.3);
+  border-right: 3px solid #fff; 
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 20px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: #007bff;
+  padding-left: 30px;
+}
+
+/* Hamburger Menu Button */
+.menu-btn {
+  position: absolute;
+  top: 80px; 
+  left: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.bar {
+  height: 4px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.bar1 {
+  transform-origin: top left;
+}
+
+.bar2 {
+  opacity: 1;
+}
+
+.bar3 {
+  transform-origin: bottom left;
+}
+
+/* Hamburger to X Animation */
+.menu-btn.active .bar1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.active .bar2 {
+  opacity: 0;
+}
+
+.menu-btn.active .bar3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 0;
+  padding: 100px 20px 20px 20px; 
+  transition: margin-left 0.3s, transform 0.3s ease; 
+  z-index: 1;
+}
+
+/* Chat Section Styling */
+.chat-space {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px; 
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.post-container {
+  max-height: 400px;
+  overflow-y: scroll;
+  padding-right: 10px;
+  margin-top: 20px;
+}
+
+.post {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+}
+
+.post-actions {
+  margin-top: 10px;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.post-actions button:hover {
+  color: #007bff;
+}
+
+/* Collapsible Sidebar Animation */
+.sidebar.active {
+  left: 0;
+}
+
+/* Active Sidebar Link */
+.sidebar-link.active {
+  background-color: #0056b3;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .menu-btn {
+    font-size: 26px;
+    padding: 12px;
+  }
+
+  .chat-space {
+    width: 90%; 
+  }
+}

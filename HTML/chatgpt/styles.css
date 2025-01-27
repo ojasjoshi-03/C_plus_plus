@@ -1,0 +1,79 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header with centered name */
+  .centered-name {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Optional background */
+    position: sticky; /* Keeps it on top while scrolling */
+    top: 0;
+    z-index: 10;
+  }
+  
+  .centered-name h1 {
+    font-size: 5rem; /* Large font size */
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+    color: #333; /* Text color */
+  }
+  
+  /* Content below the header */
+  .logo-container {
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    z-index: 10; /* Ensure the logo stays above the content */
+  }
+
+  .logo-container img {
+    max-width: 200px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  /* Content section */
+  .content {
+    min-height: 200vh; /* Ensure there is enough content to scroll */
+    padding: 20px;
+    background-color: #ffffff;
+  }
+
+  /* Fade-out effect on scroll */
+  .logo-container img {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Reduce opacity and move up when scrolling */
+  .logo-container.sticky-active img {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  main {
+    padding: 2rem;
+  }
+  
+  section {
+    min-height: 150vh; /* Simulates long content for scrolling */
+    background-color: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  section p {
+    font-size: 1.5rem;
+    color: #555;
+  }
+  
